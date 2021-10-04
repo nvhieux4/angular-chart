@@ -1,0 +1,32 @@
+
+    <div class="row" [class.row-full]='!isCheckRow'>
+        <table [class.col-8]="isCheckRow">
+            <thead>
+                <tr>
+                    <th *ngFor="let column of columns" [class.select]="column.isSelect" (click)="handleSelectRow(column.title)"><div>{{ column.label }}</div></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  *ngFor="let filterData of filterData">     
+                    <td *ngFor="let column of columns " [class.select]="column.isSelect">
+                        <div [ngSwitch]="column.title">
+                            <ng-container *ngSwitchCase="'id'">
+                               <i>icon</i>
+                            </ng-container>
+                            <ng-container  *ngSwitchDefault>
+                                {{ filterData[column.title] }}
+                            </ng-container>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <app-show-colum-table 
+            class="col-4" 
+            [hidden]='!isCheckRow' 
+            [data]="filterData"
+            [isClickRow]="titleRowOld"
+        >
+        </app-show-colum-table>
+    </div>
+

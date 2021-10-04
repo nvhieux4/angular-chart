@@ -1,0 +1,15 @@
+
+<div>
+    <span>
+        Number of row 
+    </span>
+    <input type="number" [(ngModel)]="query">
+    <span>Total</span>
+    <input type="number" disabled value="1000">
+</div>
+<div>
+    <div >
+        <app-table [queryInput] ="query" class="container" ></app-table>
+    </div>
+</div>
+

@@ -1,0 +1,66 @@
+
+<!-- <highcharts-chart 
+[Highcharts]="Highcharts"
+
+[constructorType]="chartConstructor"
+[options]="chartOptions"
+[callbackFunction]="chartCallback"
+></highcharts-chart> -->
+
+<div [chart]="chart"></div>
+
+<div class="container">
+    <div class="title">
+        <span>Not Null</span>
+        <span class="title-number">{{notNull | async}}</span>
+    </div>
+    <div class="title">
+        <span>
+            Percentile 25
+        </span>
+        <span class="title-number">23</span>
+    </div>
+    <div class="title">
+        <span>
+            Standard Deviation
+        </span>
+        <span class="title-number">23</span>
+    </div>
+    <div class="title">
+        <span>
+            Null
+        </span>
+        <span class="title-number">{{dataNull | async}}</span>
+    </div>
+    <div class="title">
+        <span>
+            Percentile 50
+        </span>
+        <span class="title-number">23</span>
+    </div>
+    <div class="title">
+        <span>
+            Average
+        </span>
+        <span class="title-number">{{average | async}}</span>
+    </div>
+    <div class="title">
+        <span>
+            Percentile 75
+        </span>
+        <span class="title-number">23</span>
+    </div>
+    <div class="title">
+        <span>
+            Variance 
+        </span>
+        <span class="title-number">23</span>
+    </div>
+    <div class="title">
+        <span>
+            Maximum 
+        </span>
+        <span class="title-number">{{maxiMum | async}}</span>
+    </div>
+    
+</div>
